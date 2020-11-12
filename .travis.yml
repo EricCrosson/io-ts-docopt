@@ -27,8 +27,7 @@ jobs:
         - npm run lint
     - stage: test
       script:
-        - npm run build
-        - npm test
+        - npm run build && npm test
       after_success:
         - npm run coverage
     - stage: deploy

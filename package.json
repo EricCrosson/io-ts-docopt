@@ -48,8 +48,8 @@
         "prettier:check": "prettier --list-different src/**/*.ts",
         "prettier:write": "prettier --write src/**/*.ts",
         "watch:lint": "nodemon -e 'ts js json' -x 'npm run lint || true'",
-        "test": "c8 ava",
-        "watch:test": "nodemon -e 'ts json' -x 'npm run build && npm test || true'",
+        "test": "npm run build && c8 ava",
+        "watch:test": "nodemon -e 'ts json' -x 'npm test || true'",
         "coverage": "c8 report --reporter=text-lcov | codecov --pipe",
         "typedoc": "typedoc"
     },
